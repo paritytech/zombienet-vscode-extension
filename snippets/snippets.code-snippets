@@ -1,0 +1,81 @@
+{
+  // Description: Big Network test
+  // Network: ./0005-big-network.toml
+  // Creds: config
+  "Header": {
+    "prefix": "head",
+    "body": ["Description: $1", "Network: $2", "Creds: $3", "", "$0"],
+    "description": "Header"
+  },
+
+  // alice: is up
+  "Node is up": {
+    "prefix": "up",
+    "body": ["${1:alice}: is up", "$0"],
+    "description": "Ensure a node is up"
+  },
+
+  // alice: parachain 100 is registered within 225 seconds
+  "Parachain registered": {
+    "prefix": "para_registered",
+    "body": [
+      "${1:alice}: parachain ${2:100} is registered within $(3:10} seconds",
+      "$0"
+    ],
+    "description": "A parachain is registered within a certain time"
+  },
+
+  // alice: trace with traceID 94c1501a78a0d83c498cc92deec264d9 contains ["answer-chunk-request", "answer-chunk-request"]
+  "Tracing": {
+    "prefix": "trace",
+    "body": ["${1:alice}: trace with traceID $2 contains [\"$3\"]", "$0"],
+    "description": "Check trace"
+  },
+
+  // alice: reports node_roles is 4
+  "Role": {
+    "prefix": "up",
+    "body": ["${1:alice}: reports ${2:node_roles} is $3", "$0"],
+    "description": "Check role"
+  },
+
+  // alice: reports histogram polkadot_pvf_execution_time has at least 2 samples in buckets ["0.1", "0.25", "0.5", "+Inf"] within 100 seconds
+  "Histogram": {
+    "prefix": "histo",
+    "body": [
+      "${1:alice}: reports histogram $2 has at least $3 samples in buckets [\"$4\"] within ${5:10} seconds",
+      "$0"
+    ],
+    "description": "Check histogram"
+  },
+
+  // bob: system event contains "A candidate was included" within 20 seconds
+  "Check event": {
+    "prefix": "event",
+    "body": [
+      "${1:alice}: system event contains \"${2:A candidate was included}\" within ${3:10} seconds",
+      "$0"
+    ],
+    "description": "Check that we saw an event"
+  },
+
+  // alice: system event matches glob "*was backed*" within 10 seconds
+  "Check glob": {
+    "prefix": "glob",
+    "body": [
+      "${1:alice}: system event matches glob \"${2:*was backed*}\" within ${3:10} seconds",
+      "$0"
+    ],
+    "description": "Check for glob"
+  },
+
+  // bob: log line matches glob "*rted #1*" within 10 seconds
+  "Check log": {
+    "prefix": "log",
+    "body": [
+      "${1:alice}: log line matches glob \"${2:*rted #1*}\" within ${3:10} seconds",
+      "$0"
+    ],
+    "description": "Check logs"
+  }
+}
