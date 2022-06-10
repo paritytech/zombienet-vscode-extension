@@ -1,11 +1,12 @@
 ⚠️ 🚧 Under Active Development 🚧 ⚠️
 
-# zombienet-snippets
+# zombienet extension for VsCode
 
-This is the README for the"zombienet-snippets" extension. It assists you writting tests using the Zombienet DSL.
+This is the README for the `zombienet-extension`. It assists you writting tests using the Zombienet DSL.
+
 ## Usage
 
-Create a file with the `.feature`extension, then using the Vscode panel select `Insert Snippet`. Select your snippet and press enter.
+Create a file with the `.feature` extension, then using the Vscode panel select `Insert Snippet`. Select your snippet and press enter.
 Use `TAB` to jump to the next fields.
 
 ## Building package
