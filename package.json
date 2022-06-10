@@ -28,7 +28,8 @@
       {
         "id": "zndsl",
         "extensions": [
-          ".feature"
+          ".feature",
+          ".zndsl"
         ],
         "aliases": [
           "ZombieNet"
