@@ -3,6 +3,7 @@
   "displayName": "zombienet-extension",
   "description": "Zombienet extension",
   "version": "0.0.1",
+  "publisher": "paritytech",
   "author": {
     "name": "Wilfried Kopp aka Chevdor"
   },
@@ -12,7 +13,7 @@
     "url": "https://github.com/paritytech/zombienet-vscode-extension.git"
   },
   "engines": {
-    "vscode": "^1.68.0"
+    "vscode": "^1.67.0"
   },
   "categories": [
     "Snippets"
