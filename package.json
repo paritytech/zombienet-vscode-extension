@@ -4,6 +4,7 @@
   "description": "Zombienet extension",
   "version": "0.0.1",
   "publisher": "paritytech",
+  "icon": "resources/zombienet_256px.png",
   "author": {
     "name": "Wilfried Kopp aka Chevdor"
   },
