@@ -25,6 +25,26 @@
     "description": "A parachain is registered within a certain time"
   },
 
+  // alice: parachain 100 block height is at least 10 within 500 seconds
+  "Parachain block height": {
+    "prefix": "para_block",
+    "body": [
+      "${1:alice}: parachain ${2:100} block height is ${3:at least} ${4:10} within ${5:120} seconds",
+      "$0"
+    ],
+    "description": "A parachain block height is x within a certain time"
+  },
+
+  // alice: parachain 100 perform upgrade with ../shell_runtime-v2.compact.compressed.wasm within 200 seconds
+  "Parachain upgrade": {
+    "prefix": "para_upgrade",
+    "body": [
+      "${1:alice}: parachain ${2:100} perform upgrade with ${3:../shell_runtime-v2.compact.compressed.wasm} within ${4:200} seconds",
+      "$0"
+    ],
+    "description": "A parachain block height is x within a certain time"
+  },
+
   // alice: trace with traceID 94c1501a78a0d83c498cc92deec264d9 contains ["answer-chunk-request", "answer-chunk-request"]
   "Tracing": {
     "prefix": "trace",
@@ -34,9 +54,16 @@
 
   // alice: reports node_roles is 4
   "Role": {
-    "prefix": "up",
+    "prefix": "role",
     "body": ["${1:alice}: reports ${2:node_roles} is $3", "$0"],
     "description": "Check role"
+  },
+
+  // alice: reports parachain_candidate_disputes_total is at least 1 within 130 seconds
+  "Report": {
+    "prefix": "report",
+    "body": ["${1:alice}: reports ${2:parachain_candidate_disputes_total} is ${3:at least} $4 within ${4:200} seconds", "$0"],
+    "description": "Prometheus metric assertion"
   },
 
   // alice: reports histogram polkadot_pvf_execution_time has at least 2 samples in buckets ["0.1", "0.25", "0.5", "+Inf"] within 100 seconds
@@ -77,5 +104,75 @@
       "$0"
     ],
     "description": "Check logs"
-  }
+  },
+
+  // alice: js-script ./0008-custom.js within 200 seconds
+  "Custom js assert completeness": {
+    "prefix": "js",
+    "body": [
+      "${1:alice}: js-script ${2:./custom.js} within ${3:20} seconds",
+      "$0"
+    ],
+    "description": "Run custom js and assert on completeness"
+  },
+
+  // alice: js-script ./0008-custom.js with "[1]" within 200 seconds
+  "Custom js with args assert completeness": {
+    "prefix": "js_with_args",
+    "body": [
+      "${1:alice}: js-script ${2:./custom.js} with \"[$3]\" within ${4:20} seconds",
+      "$0"
+    ],
+    "description": "Run custom js with argsand assert on completeness"
+  },
+
+  // alice: run ./0008-custom.sh within 200 seconds
+  "Custom sh assert completeness": {
+    "prefix": "sh",
+    "body": [
+      "${1:alice}: run ${2:./custom.sh} within ${3:20} seconds",
+      "$0"
+    ],
+    "description": "Run custom sh in the pod and assert on completeness"
+  },
+
+  // alice: run ./0008-custom.sh with "[1]" within 200 seconds
+  "Custom sh with args assert completeness": {
+    "prefix": "sh_with_args",
+    "body": [
+      "${1:alice}: run ${2:./custom.sh} with \"[$3]\" within ${4:20} seconds",
+      "$0"
+    ],
+    "description": "Run custom sh with args in the pod and assert on completeness"
+  },
+
+  // Commands
+
+  // alice: run ./0008-custom.sh with "[1]" within 200 seconds
+  "Restart": {
+    "prefix": "restart",
+    "body": [
+      "${1:alice}: restart after ${2:10} seconds",
+      "$0"
+    ],
+    "description": "Restart the process after x seconds"
+  },
+
+  "Pause": {
+    "prefix": "pause",
+    "body": [
+      "${1:alice}: pause",
+      "$0"
+    ],
+    "description": "Pause the process"
+  },
+
+  "Resume": {
+    "prefix": "resume",
+    "body": [
+      "${1:alice}: resume",
+      "$0"
+    ],
+    "description": "Resume the process"
+  },
 }

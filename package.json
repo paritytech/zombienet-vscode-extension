@@ -2,12 +2,13 @@
   "name": "zombienet-extension",
   "displayName": "zombienet-extension",
   "description": "Zombienet extension",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "paritytech",
   "icon": "resources/zombienet_256px.png",
-  "author": {
-    "name": "Wilfried Kopp aka Chevdor"
-  },
+  "authors": [
+    {"name": "Wilfried Kopp aka Chevdor"},
+    {"name": "Javier Viola"}
+  ],
   "license": "MIT",
   "repository": {
     "type": "git",
