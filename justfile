@@ -16,4 +16,4 @@ publish: package
 	vsce publish
 
 install: package
-	code --install-extension zombienet-extension-0.0.1.vsix
+	code --install-extension zombienet-extension-0.0.2.vsix
