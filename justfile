@@ -1,3 +1,5 @@
+export VERSION:=`cat package.json| jq -r .version`
+
 # List available commands
 _default:
   just --choose --chooser "fzf +s -x --tac --cycle"
@@ -21,4 +23,6 @@ publish: package
 
 # Install the extension locally after building it
 install: package
-	code --install-extension zombienet-extension-0.0.2.vsix
+	#!/usr/bin/env bash
+	echo "Installing version $VERSION"
+	code --install-extension zombienet-extension-${VERSION}.vsix
