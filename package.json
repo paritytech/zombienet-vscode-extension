@@ -31,7 +31,6 @@
       {
         "id": "zndsl",
         "extensions": [
-          ".feature",
           ".zndsl"
         ],
         "aliases": [
@@ -40,7 +39,7 @@
       }
     ],
     "files.associations": {
-      "*.feature": "zndsl"
+      "*.zndsl": "zndsl"
     }
   }
 }
