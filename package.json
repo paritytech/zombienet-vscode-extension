@@ -37,6 +37,9 @@
           "ZombieNet"
         ]
       }
-    ]
+    ],
+    "files.associations": {
+      "*.zndsl": "zndsl"
+    }
   }
 }
