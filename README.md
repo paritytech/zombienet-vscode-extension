@@ -8,7 +8,7 @@ This is the README for the `zombienet-extension`. It assists you writting tests 
 
 ## Usage
 
-Create a file with the `zndsl` extension (or the deprecated `.feature` extension), then using the VScode panel select `Insert Snippet`. Select your snippet and press enter.
+Create a file with the `zndsl` extension, then using the VScode panel select `Insert Snippet`. Select your snippet and press enter.
 Use `TAB` to jump to the next fields.
 
 ## Requirements

@@ -31,16 +31,12 @@
       {
         "id": "zndsl",
         "extensions": [
-          ".feature",
           ".zndsl"
         ],
         "aliases": [
           "ZombieNet"
         ]
       }
-    ],
-    "files.associations": {
-      "*.feature": "zndsl"
-    }
+    ]
   }
 }
