@@ -31,7 +31,6 @@
       {
         "id": "zndsl",
         "extensions": [
-          ".feature",
           ".zndsl"
         ],
         "aliases": [
