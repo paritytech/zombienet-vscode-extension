@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ZombieNet DSL schema",
+  "description": "JSON Schema definition for ZombieNet DSL Schema",
+  "type": "object",
+  "properties": {
+    "Description": {
+      "title": "Description of the network",
+      "$ref": "#/$defs/Description",
+      "minLength": 3,
+      "maxLength": 64,
+      "markdownDescription": "The description of the network. It is a string from 3..64 chars."
+    },
+    "Network": {
+      "title": "Name of the network file",
+      "$ref": "#/$defs/file",
+      "markdownDescription": "The name of the network file. Should be a toml or a json file"
+    },
+    // TODO: Talk to Javier about this
+    "Creds": {
+      "title": "Creds configuration something",
+      "type": "string",
+      "enum": ["config", "foo", "bar"],
+      "markdownDescription": "----------"
+    }
+  },
+  "$defs": {
+    "Description": { "type": "string" },
+    "file": { "type": "string", "pattern": ".*\\.(toml|json)$" }
+  },
+  "required": [
+    "Description",
+    "Network"
+  ]
+}
+// TODO: "Say" to the extension to load this file
