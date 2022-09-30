@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ZombieNet DSL",
+  "description": "JSON Schema definition for ZombieNet DSL Schema",
+  "type": "object",
+  "properties": {
+    "Description": {
+      "title": "Description of the network",
+      "$ref": "#/$defs/Description",
+      "minLength": 3,
+      "maxLength": 64,
+      "markdownDescription": "The description of the network. It is a string from 3..64 chars."
+    },
+    "Network": {
+      "title": "Name of the network file",
+      "$ref": "#/$defs/file",
+      "markdownDescription": "The path of the network file. It should be a valid path to a `toml` or `json` file describing the network."
+    }
+  },
+  "$defs": {
+    "Description": { "type": "string" },
+    "file": { "type": "string", "pattern": ".*\\.(toml|json)$" }
+  },
+  "required": [
+    "Description",
+    "Network"
+  ]
+}
