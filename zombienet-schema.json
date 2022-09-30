@@ -15,22 +15,14 @@
       "title": "Name of the network file",
       "$ref": "#/$defs/file",
       "markdownDescription": "The name of the network file. Should be a toml or a json file"
-    },
-    "Creds": {
-      "title": "Creds configuration something",
-      "type": "string",
-      "enum": ["config", "foo", "bar"],
-      "markdownDescription": "----------"
     }
   },
   "$defs": {
     "Description": { "type": "string" },
-    "file": { "type": "string", "pattern": ".*\\.(toml|json)$" },
-    "statement": { "type": "string" }
+    "file": { "type": "string", "pattern": ".*\\.(toml|json)$" }
   },
   "required": [
     "Description",
-    "Network",
-    "Creds"
+    "Network"
   ]
 }
