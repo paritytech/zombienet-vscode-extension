@@ -14,7 +14,7 @@
     "Network": {
       "title": "Name of the network file",
       "$ref": "#/$defs/file",
-      "markdownDescription": "The name of the network file. Should be a toml or a json file"
+      "markdownDescription": "The path of the network file. It should be a valid path to a `toml` or `json` file describing the network."
     }
   },
   "$defs": {
