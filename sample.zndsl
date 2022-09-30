@@ -1,5 +1,0 @@
-Description: This is a test
-Network: ./some.toml
-Creds: 
-
-alice: system event contains "A candidate was included" within 10 seconds

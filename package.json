@@ -1,13 +1,14 @@
 {
   "name": "zombienet-extension",
-  "displayName": "zombienet-extension",
-  "description": "Zombienet extension",
-  "version": "0.0.2",
-  "publisher": "paritytech",
+  "displayName": "ZombieNet",
+  "description": "Extension for supporting Zombienet(zndsl) files",
+  "version": "0.0.3",
+  "publisher": "Paritytech",
   "icon": "resources/zombienet_256px.png",
   "authors": [
     {"name": "Wilfried Kopp aka Chevdor"},
-    {"name": "Javier Viola"}
+    {"name": "Javier Viola"},
+    {"name": "Nikolaos Kontakis"}
   ],
   "license": "MIT",
   "repository": {
@@ -21,25 +22,28 @@
     "Snippets"
   ],
   "contributes": {
+    "yamlValidation": [
+      {
+        "fileMatch": "/*.zndsl",
+        "url": "./zombienet-schema.json"
+      }
+    ],
     "snippets": [
       {
         "language": "zndsl",
         "path": "./snippets/snippets.code-snippets"
       }
     ],
-    "languages": [
-      {
-        "id": "zndsl",
-        "extensions": [
-          ".zndsl"
-        ],
-        "aliases": [
-          "ZombieNet"
-        ]
-      }
-    ],
-    "files.associations": {
-      "*.zndsl": "zndsl"
-    }
+    "languages": [{
+      "id": "zndsl",
+      "aliases": ["ZombieNet", "ZNDSL", "zndsl"],
+      "extensions": [".zndsl"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "zndsl",
+      "scopeName": "source.zndsl",
+      "path": "./syntaxes/zndsl.tmLanguage.json"
+    }]
   }
 }
